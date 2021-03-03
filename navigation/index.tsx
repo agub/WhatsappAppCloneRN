@@ -38,6 +38,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
 	return (
+		//WhatsApp Logo Area:  Top Navigation
+
 		<Stack.Navigator
 			screenOptions={{
 				headerStyle: {
@@ -54,9 +56,11 @@ function RootNavigator() {
 		>
 			<Stack.Screen
 				name='Root'
+				//Where MainNavigator placed at
 				component={MainTabNavigator}
 				options={{
 					title: "WhatsApp",
+					//styles of Top Navigation including Search logo
 					headerRight: () => (
 						<View
 							style={{

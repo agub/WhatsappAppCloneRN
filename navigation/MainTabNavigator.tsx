@@ -11,13 +11,16 @@ import ChatsScreen from "../screens/ChatsScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 
+//Made it to Top Navigator
 const MainTab = createMaterialTopTabNavigator<MainTabParamList>();
 
 export default function MainTabNavigator() {
 	const colorScheme = useColorScheme();
 
 	return (
+		//Main Navigator on top!!!
 		<MainTab.Navigator
+			//InialRoute when the application is opened
 			initialRouteName='Chats'
 			tabBarOptions={{
 				activeTintColor: Colors.light.background,
@@ -31,16 +34,20 @@ export default function MainTabNavigator() {
 				labelStyle: {
 					fontWeight: "bold",
 				},
+
+				// Usually disabled this option but requires when Icon needs to be shown
 				showIcon: true,
 			}}
 		>
 			<MainTab.Screen
 				name='Camera'
 				component={TabOneNavigator}
+				//Adding logo, and action on the tab
 				options={{
 					tabBarIcon: ({ color }) => (
-						<Fontisto name='camera' color={color} size={18} />
+						<Fontisto name='camera' color={color} size={16} />
 					),
+					//disable the name of the menu
 					tabBarLabel: () => null,
 				}}
 			/>
@@ -53,6 +60,8 @@ export default function MainTabNavigator() {
 
 // You can explore the built-in icon families and icons on the web at:
 // https://icons.expo.fyi/
+
+//just Icon
 function TabBarIcon(props: {
 	name: React.ComponentProps<typeof Ionicons>["name"];
 	color: string;

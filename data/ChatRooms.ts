@@ -4,12 +4,12 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
 				id: "u2",
-				name: "Lukas",
+				name: "Hikari",
 				imageUri: "https://source.unsplash.com/random",
 			},
 		],
@@ -24,7 +24,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -44,7 +44,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -55,7 +55,7 @@ export default [
 		],
 		lastMessage: {
 			id: "m3",
-			content: "Hi, Vadim.",
+			content: "Hi, Shin.",
 			createdAt: "2020-10-02T14:48:00.000Z",
 		},
 	},
@@ -64,7 +64,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -84,7 +84,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -104,7 +104,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -124,7 +124,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -144,7 +144,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{
@@ -164,7 +164,7 @@ export default [
 		users: [
 			{
 				id: "u1",
-				name: "Vadim",
+				name: "Shin",
 				imageUri: "https://source.unsplash.com/random",
 			},
 			{

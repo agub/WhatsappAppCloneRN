@@ -5,8 +5,13 @@ import {
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-import { ColorSchemeName, View } from "react-native";
-import { MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
+import { ColorSchemeName, View, TouchableOpacity } from "react-native";
+import {
+	FontAwesome5,
+	MaterialCommunityIcons,
+	Octicons,
+	MaterialIcons,
+} from "@expo/vector-icons";
 // import { View } from "../components/Themed";
 // import { Colors } from "react-native/Libraries/NewAppScreen";
 import Colors from "../constants/Colors";
@@ -14,6 +19,7 @@ import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
 import MainTabNavigator from "./MainTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
+import ChatRoomScreen from "../screens/ChatRoomScreen";
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -25,7 +31,9 @@ export default function Navigation({
 	return (
 		<NavigationContainer
 			linking={LinkingConfiguration}
-			theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+			//IF COLOR GET WEIRD ENABLE THIS !!
+
+			// theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
 		>
 			<RootNavigator />
 		</NavigationContainer>
@@ -80,10 +88,67 @@ function RootNavigator() {
 					),
 				}}
 			/>
+
+			<Stack.Screen
+				name='ChatRoom'
+				component={ChatRoomScreen}
+				//options can take params which could be used on display name or passing data
+				options={({ route }: any) => ({
+					title: route.params.name,
+					headerRight: () => (
+						<View
+							style={{
+								flexDirection: "row",
+								width: 100,
+								justifyContent: "space-between",
+								marginRight: 10,
+							}}
+						>
+							<TouchableOpacity
+								onPress={() =>
+									console.warn(
+										`Calling to ${route.params.name}.....`
+									)
+								}
+							>
+								<MaterialIcons
+									name='call'
+									size={22}
+									color={"white"}
+								/>
+							</TouchableOpacity>
+
+							<TouchableOpacity
+								onPress={() =>
+									console.warn(
+										`Video Calling to ${route.params.name}.....`
+									)
+								}
+							>
+								<FontAwesome5
+									name='video'
+									size={22}
+									color={"white"}
+								/>
+							</TouchableOpacity>
+
+							<TouchableOpacity
+								onPress={() => console.warn(`Options.....`)}
+							>
+								<MaterialCommunityIcons
+									name='dots-vertical'
+									size={22}
+									color={"white"}
+								/>
+							</TouchableOpacity>
+						</View>
+					),
+				})}
+			/>
 			<Stack.Screen
 				name='NotFound'
 				component={NotFoundScreen}
-				options={{ title: "Oops!" }}
+				options={{ title: "Opppss" }}
 			/>
 		</Stack.Navigator>
 	);

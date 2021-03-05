@@ -12,6 +12,7 @@ import TabTwoScreen from "../screens/TabTwoScreen";
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 import CameraScreen from "../screens/CameraScreen";
 import StatusScreen from "../screens/StatusScreen";
+import CallsScreen from "../screens/CallsScreen";
 
 //Made it to Top Navigator
 const MainTab = createMaterialTopTabNavigator<MainTabParamList>();
@@ -56,7 +57,7 @@ export default function MainTabNavigator() {
 			/>
 			<MainTab.Screen name='Chats' component={ChatsScreen} />
 			<MainTab.Screen name='Status' component={StatusScreen} />
-			<MainTab.Screen name='Calls' component={TabTwoNavigator} />
+			<MainTab.Screen name='Calls' component={CallsScreen} />
 		</MainTab.Navigator>
 	);
 }

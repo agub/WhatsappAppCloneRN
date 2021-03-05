@@ -43,3 +43,12 @@ export type Chatroom = {
 
 	lastMessage: Message;
 };
+
+export type Calls = {
+	id: string;
+	users: User[];
+	lastCall: {
+		id: string;
+		createdAt: string;
+	};
+};

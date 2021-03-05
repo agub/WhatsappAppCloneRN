@@ -9,7 +9,7 @@ export type ContactListItemProps = {
 	user: User;
 };
 
-const ContactListItem = (props: ContactListItemProps) => {
+const StatusList = (props: ContactListItemProps) => {
 	const { user } = props;
 
 	const navigation = useNavigation();
@@ -36,4 +36,4 @@ const ContactListItem = (props: ContactListItemProps) => {
 	);
 };
 
-export default ContactListItem;
+export default StatusList;

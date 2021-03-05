@@ -1,22 +1,20 @@
-import * as React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
-import ContactListItem from "../components/ContactListItem";
-import { useRoute } from "@react-navigation/native";
+import React from "react";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 import User from "../data/User";
+import StatusList from "../components/StatusList";
 
-export default function ContactsScreen() {
-	const route = useRoute();
+const StatusScreen = () => {
 	return (
 		<View style={styles.container}>
 			<FlatList
 				data={User}
 				style={{ width: "100%" }}
-				renderItem={({ item }) => <ContactListItem user={item} />}
+				renderItem={({ item }) => <StatusList user={item} />}
 				keyExtractor={(item) => item.id}
 			/>
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -26,3 +24,4 @@ const styles = StyleSheet.create({
 		backgroundColor: "white",
 	},
 });
+export default StatusScreen;
